@@ -1,0 +1,14 @@
+language: ruby
+rvm: 
+  - 2.2.3
+env:
+  - DB=postgresql
+
+deploy:
+  provider: heroku
+  app: ForestCitySite
+  api_key: "ac2f23ae-49dc-46e5-bb29-8bd65ce12cc6"
+  run:
+    - "bundle"
+    - "rake db:migrate"
+  strategy: git
