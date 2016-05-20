@@ -1,0 +1,77 @@
+body {
+	background-color: rgb(145, 184, 104);
+}
+
+#nav-bar {
+
+}
+
+#nav-bar ul {
+	list-style: none;
+	text-align: center;
+	border-bottom: 1px dashed rgba(0,0,0, 0.5);
+}
+
+#nav-bar li {
+	display: inline-block;
+	padding: 25px 0;
+}
+
+#nav-bar a {
+	padding: 25px 60px;
+	text-decoration: none;
+	color: black;
+}
+
+#nav-bar li:hover {
+	position: relative;
+	transform: skew(160deg);
+	border-radius: 25px 0;
+	background-color: rgb(145, 184, 104);
+}
+
+#nav-bar ul li:hover:after {
+	background-image: radial-gradient(circle at 0 0, rgba(255, 255, 255, 0) 25px, rgb(145, 184, 104) 25px);
+	content: '';
+	bottom: 0;
+	left: -24px;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+}
+
+#nav-bar ul li:hover:before {
+	background-image: radial-gradient(circle at 100% 100%, rgba(255, 255, 255, 0) 25px, rgb(145, 184, 104) 25px);
+	content: '';
+	top: 0;
+	right: -24px;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+}
+
+#center-body {
+	width: 85%;
+	min-height: 1000px;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 2px 10px black;
+	margin: 0 auto;
+}
+
+#center-content {
+	width: 60%;
+	margin: 0 auto;
+	background-color: red;
+}
+
+#left-content {
+	float: left;
+	background-color: green;
+	width: 20%;
+}
+
+#right-content {
+	float: right;
+	background-color: green;
+	width: 20%;
+}
