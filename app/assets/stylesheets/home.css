@@ -65,6 +65,7 @@ body {
 }
 
 #left-content {
+	clear: both;
 	float: left;
 	background-color: green;
 	width: 20%;
