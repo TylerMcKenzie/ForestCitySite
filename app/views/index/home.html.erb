@@ -7,5 +7,24 @@
 </div>
 
 <div id="center-content">
-	<p>Center</p>
+	<h2>Posts</h2>
+	<ul class="post-list">
+		<% @posts.each do |post| %>
+		<li class="post-li">
+			<div class="post">
+				<p><%= Date.parse(post['created_time']).strftime('%d, %b %Y') %></p>
+				<p class="message"><%= post['message'] %></p>
+				<a class="post-link" href="<%= post["link"] %>" target="_blank"><img src="<%= post['full_picture'] %>"></a>
+				<!-- <ul>
+				<% post["comments"].to_h["data"].to_a.each do |comment| %>
+					<li>
+						<p><%= comment["message"] %></p>
+						<p><%= comment["from"]["name"] %></p>
+					</li>
+				<% end %>
+				</ul> -->
+			</div>
+		</li>
+		<% end %>
+	</ul>
 </div>
